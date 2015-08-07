@@ -2,9 +2,11 @@
 /**
  * The header for our theme.
  *
- * Displays all of the <head> section and everything up till <div id="content">
+ * This is the template that displays all of the <head> section and everything up until <div id="content">
  *
- * @package _s
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package terra motive
  */
 
 ?><!DOCTYPE html>
@@ -20,22 +22,34 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', '_s' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'terra-motive' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
+		
+        <?php if ( get_header_image() ) : ?>
+        <div class="header-image">
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+            <img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
+            </a>
+           </div>
+		<?php endif; // End header image check. ?>
+        
+        <div class="site-branding">
+        	<div class="title-box">
 			<?php if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="wp-content/themes/_s-master/images/TerraCarLogo2.png" alt="LOGO"></a></h1>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="wp-content/themes/_s-master/images/TerraCarLogo2.png" alt="LOGO"></a></p>
+				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 			<?php endif; ?>
 			<p class="site-description"><?php bloginfo( 'description' ); ?></p>
+            </div>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', '_s' ); ?></button>
+			<button class="menu-toggle" aria-controls="Main Menu" aria-expanded="false"><?php esc_html_e( 'Main Menu', 'terra-motive' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-			<?php terra_motive_social_menu();?>
+			
+			
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
