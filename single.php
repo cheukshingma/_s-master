@@ -2,8 +2,11 @@
 /**
  * The template for displaying all single posts.
  *
- * @package _s
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ *
+ * @package terra motive
  */
+
 
 get_header(); ?>
 
