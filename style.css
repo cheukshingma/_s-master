@@ -1021,24 +1021,26 @@ object {
 --------------------------------------------------------------*/
 .site-footer
 {
-	background: linear-gradient(#595959, #2E2E2E);
-	padding: 0;
+	padding: 2em;
 	margin: auto;
+	font-family: 'Lato', sans-serif;
 	font-size: 16px;
 	font-weight: 1.6rem;
-	color: red;
+	color: #FFF;
+	color: hsl(0, 0%, 100%);
+	background: linear-gradient(#595959, #2E2E2E);
 }
 
-.site-footer
-{
-	color: #fff;
+.site-footer a{
+	color: #FFF;
+	color: hsl(0, 0%, 100%);
 }
-
 .site-info
 {
 	color: #006400;
 	text-align: center;
 	font-size: 14px; 
+}px; 
 }
 /*--------------------------------------------------------------
 ## Responsive Design 
