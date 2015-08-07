@@ -27,9 +27,33 @@ Layout: Content-Sidebar
     width: 100%;
 }
 
-
 .content-area {
-	float: left;
-	margin: 0 -25% 0 0;
-	width: 100%;
+	width: 70%; 
+	float:left; 
+}
+#primary {
+	width: 70%; 
+}
+#secondary {
+	width: 22%; 
+	height:100%; 
+	padding: 5px; 
+	padding-right: 8px; 
+	margin-top: 0%; 
+	margin-left: 2px; 
+	background-color: #FF6666; 
+	
+}
+.entry-header,
+.post-navigation,
+.entry-content,
+.entry-footer,
+.tag-links,
+.comments-area,
+.paging-navigation {
+    position: relative;
+    max-width: 780px;
+    max-width: 78rem;
+    padding: 0 5rem;
+    margin: 0 auto;
 }
