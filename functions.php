@@ -165,3 +165,42 @@ require get_template_directory() . '/inc/jetpack.php';
 		return 50;
 	}
 	add_filter( 'excerpt_length', 'custom_excerpt_length');
+	
+/* My First Custom Post Type */
+function my_post_type_slider() {
+	register_post_type( 'slider',
+                array( 
+				'label' => __('Slides'), 
+				'singular_label' => __('Slide', 'my_framework'),
+				'_builtin' => false,
+				'exclude_from_search' => true, // Exclude from Search Results
+				'capability_type' => 'page',
+				'public' => true, 
+				'show_ui' => true,
+				'show_in_nav_menus' => false,
+				'rewrite' => array(
+					'slug' => 'slide-view',
+					'with_front' => FALSE,
+				),
+				'query_var' => "slide", // This goes to the WP_Query schema
+				'menu_icon' => get_template_directory_uri() . '/inc/images/slides.png',
+				'supports' => array(
+						'title',
+						'custom-fields',
+						'editor',
+            					'thumbnail')
+					) 
+				);
+}
+
+add_action('init', 'my_post_type_slider');
+
+add_action( 'init', 'mytheme_setup' );
+add_theme_support( 'post-thumbnails' );
+function mytheme_setup() {
+add_image_size ('slides', 760, 300, true); // Slider Thumbnail
+}
+
+// Call the file that controls the theme options 
+//(Class 8 - Building an Option Page - Link inc/option.php)
+require get_stylesheet_directory().'/inc/options.php';
