@@ -1150,7 +1150,7 @@ object {
     font-size: 10px;
     font-size: 1rem;
  }
- 
+
 @media screen and (max-width: 750px;){
 	#primary,
 	#secondary,
@@ -1165,6 +1165,21 @@ object {
 		width: 45%; 
 	}
 
+}
+@media screen and (max-width: 480px;){
+	#top-menu{
+		height: auto;
+	}
+
+	#top-menu ul li
+	#top-menu ul li a{
+		display: block; 
+	}
+
+	#top-menu ul li a:hover{
+		background-color: #be3f48;
+		color: #FFF; 
+	}
 }
 
 
