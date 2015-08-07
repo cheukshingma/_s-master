@@ -982,6 +982,9 @@ h3#reply-title.comment-reply-title{
 .archive .format-aside .entry-title {
 	display: none;
 }
+.format-aside .entry-content{
+	margin-top: 1em;
+}
 
 /*--------------------------------------------------------------
 ## Comments
@@ -1097,3 +1100,33 @@ object {
 .gallery-caption {
 	display: block;
 }
+
+/*--------------------------------------------------------------
+## footer
+--------------------------------------------------------------*/
+.site-footer
+{
+	background: linear-gradient(#595959, #2E2E2E);
+	padding: 0;
+	margin: auto;
+	font-size: 16px;
+	font-weight: 1.6rem;
+	color: red;
+}
+
+.site-footer
+{
+	color: #fff;
+}
+
+.site-info
+{
+	color: #006400;
+	text-align: center;
+	font-size: 14px; 
+}
+
+
+
+
+
