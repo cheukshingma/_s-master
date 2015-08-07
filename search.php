@@ -2,8 +2,11 @@
 /**
  * The template for displaying search results pages.
  *
- * @package _s
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
+ *
+ * @package terra motive
  */
+
 
 get_header(); ?>
 
