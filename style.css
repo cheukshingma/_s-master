@@ -478,6 +478,17 @@ table {
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
+button
+input
+textarea
+select{
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+	font-size: 100%
+}
+
+
 button,
 input[type="button"],
 input[type="reset"],
@@ -556,10 +567,12 @@ textarea {
 --------------------------------------------------------------*/
 a {
 	color: royalblue;
+	text-decoration: none;
+	text-decoration: underline;
 }
 
 a:visited {
-	color: purple;
+	color: #333;
 }
 
 a:hover,
@@ -576,6 +589,7 @@ a:hover,
 a:active {
 	outline: 0;
 }
+
 
 /*--------------------------------------------------------------
 ## Menus
