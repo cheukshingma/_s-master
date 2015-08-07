@@ -1047,58 +1047,116 @@ object {
 --------------------------------------------------------------*/
 /* --------------- style declarations for smart-phones (orientation: portrait) ------------------ */ 
 
-@media screen and (max-width: 480px){
-
- #page {
-	width: 100%; 
-}
-
-#secondary{
-	display: none; 
-}
-
- .entry-title {
-        font-size: 22px;
-        font-size: 2.2rem;
-        line-height: 1.1em;
-    }
-
-.entry-content h1 {
-    font-size: 10px;
-    font-size: 1rem;
- }
-
-@media screen and (max-width: 750px;){
-	#primary,
-	#secondary,
-	#widgets{
-		float: none;
-		margin: auto;
+/*  Smartphones (Orientation: Landscape)  */
+@media screen and (max-width: 640px) {
+	#masthead, #content, #colophon 
+	{
+		display: block; 
+		overflow: hidden;
 		width: 100%;
 	}
-
-	#Widgets.column {
-		margin: 0 2.5% 1em;
-		width: 45%; 
+			 
+	#page
+	{
+		width: 100%; 
 	}
+		
+	#secondary 
+	{
+		display: none;
+	}
+
+	.menu-toggle, .main-navigation.toggled .nav-menu
+	{
+		display: block;
+	}
+	
+	.menu-toggle
+	{
+		display:block;
+		background-color: #BCC747;
+		color: #FFF;
+		width: auto;
+		margin: auto;
+		text-align: center;
+
+	}
+
+	.main-navigation ul 
+	{
+		display: none;
+	}
+
+		#colophon .widget
+	{
+		clear:both;
+		width:100%;
+	}
+
+	.main-navigation ul
+	{
+		text-align: left;
+	}
+
+	.main-navigation li
+	{
+		display: block;
+		width: 100%;
+		border-bottom: solid 1px;
+		border-color: #FFF;
+	}
+	
+	.main-navigation ul ul li
+	{
+		display: block;
+		width: 100%;
+	}
+	
+	.main-navigation a
+	{
+		font-size: 14px;
+	}
+	
+	#footer-menu ul
+	{
+		list-style: outside none none;
+		margin: 2px;
+		padding: 1px;
+	
 
 }
-@media screen and (max-width: 480px;){
-	#top-menu{
-		height: auto;
-	}
-
-	#top-menu ul li
-	#top-menu ul li a{
+	
+/* Smartphones (Orientation: Portrait) */ 
+@media screen and (max-width: 480px){
+	#masthead, #content, #colophon 
+	{
 		display: block; 
+		float: none; 
+		width: 100%; 
+		overflow: hidden; 
 	}
 
-	#top-menu ul li a:hover{
-		background-color: #be3f48;
-		color: #FFF; 
+	#page 
+	{
+		width: 100%; 
 	}
+
+	#secondary
+	{
+		display: none; 
+		clear: both;
+	}
+
+	
+	.main-navigation ul 
+	{
+		display: none;
+	}
+		
+	.main-navigation ul 
+	{
+		display: none;
+	}
+
 }
-
-
-
-
+  
