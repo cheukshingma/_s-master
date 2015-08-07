@@ -3,20 +3,33 @@ Theme Name: _s
 Layout: Content-Sidebar
 */
 
+.site-content {
+    padding-bottom: 2em;
+    background-color: #FFF;
+}
+.entry-content { 
+	background-color: #FFD9AA;
+	}
+	
+.single .site-content,
+.page .site-content { 
+    background: #fff; 
+    background: hsl(0, 0%, 100%);
+}
+.site-content .widget-area {
+    width: 40%;
+	float: right;
+    padding: 1em;
+    background: #D46A6A;
+}
+.site-footer {
+    clear: both;
+    width: 100%;
+}
+
+
 .content-area {
 	float: left;
 	margin: 0 -25% 0 0;
-	width: 100%;
-}
-.site-main {
-	margin: 0 25% 0 0;
-}
-.site-content .widget-area {
-	float: right;
-	overflow: hidden;
-	width: 25%;
-}
-.site-footer {
-	clear: both;
 	width: 100%;
 }
