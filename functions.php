@@ -154,3 +154,11 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/*
+amount of words to excerpt
+*/
+	function custom_excerpt_length( $length ) {
+		return 20;
+	}
+	add_filter( 'excerpt_length', 'custom_excerpt_length');
