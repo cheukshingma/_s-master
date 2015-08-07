@@ -599,6 +599,13 @@ a:active {
 	display: block;
 	float: left;
 	width: 100%;
+	margin: 0 auto 0;
+	padding: 0;
+	text-align: center;
+	background: linear-gradient(#595959, #2E2E2E);
+	border-bottom: solid 3px;
+	border-color: #cdd422;
+	height: 40px;
 }
 
 .main-navigation ul {
@@ -606,6 +613,7 @@ a:active {
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
+	float: center;
 }
 
 .main-navigation li {
@@ -615,7 +623,13 @@ a:active {
 
 .main-navigation a {
 	display: block;
+	font-size: 13px; 
+	font-weight: 300;
+	letter-spacing: 0.5px;
 	text-decoration: none;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	padding: 10px 25px;
 }
 
 .main-navigation ul ul {
@@ -626,7 +640,6 @@ a:active {
 	left: -999em;
 	z-index: 99999;
 }
-
 .main-navigation ul ul ul {
 	left: -999em;
 	top: 0;
