@@ -778,6 +778,61 @@ a:active {
 .site-footer:after {
 	clear: both;
 }
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.site-header{
+	background:#f4f6c2;
+}
+.header-image img{
+	display: block;
+	height: 100px;
+	width: 350px;
+	float: left;
+	margin-bottom: 15px;
+}
+
+.site-branding {
+	padding: 6rem 0;
+	text-align: center;
+	background: #2F880E;
+}
+
+.title-box	{
+	width: 600px;
+	max-width: 75%;
+	padding: 4rem;
+	margin: 0 auto;
+	border: solid 1px #fff;
+}
+
+.site-title {
+	font-weight: 700;
+	font-size: 40px;
+	font-size: 4.5rem;
+	text-transform: uppercase;
+	line-height: normal;
+	padding-bottom: 1rem;
+}
+
+.site-description {
+	font-weight: 100;
+	font-size: 20px;
+	font-size: 2rem;
+}
+
+/* Header Responsive*/
+@media screen and (max-width:600px)	{
+	.site-branding { padding: 0;}
+	
+	.title-box{
+		max-width: 100%;
+		margin: 0;
+		padding: 4rem;
+		border: none;
+	}
+}
+
 
 /*--------------------------------------------------------------
 # Widgets
