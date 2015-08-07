@@ -1074,12 +1074,12 @@ object {
 	.menu-toggle
 	{
 		display:block;
+		font-family: 'Orbitron', sans-serif;
+		text-align: center;
 		background-color: #BCC747;
 		color: #FFF;
 		width: auto;
 		margin: auto;
-		text-align: center;
-
 	}
 
 	.main-navigation ul 
