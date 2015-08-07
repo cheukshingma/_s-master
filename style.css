@@ -62,6 +62,23 @@ body {
 	text-align: center;
 }
 
+body.page{
+	background: #DFDED4; 
+}
+
+#page{
+	margin: 0 auto;
+	padding: 0;
+	width: 85%;
+	text-align: left;
+	background-color: #FFF;
+}
+
+#content{
+	background-color: #FFF;
+}
+
+
 article,
 aside,
 details,
