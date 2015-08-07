@@ -682,6 +682,37 @@ a:active {
 .main-navigation .current_page_ancestor > a {
 }
 
+/* Social Media Icons */
+
+.menu-social ul {
+    float: right;
+    text-align: center;
+    list-style: none;    
+}
+
+.menu-social ul li {
+    position: relative;
+    display:  inline-block;    
+}
+
+.menu-social li a:before {
+    display: inline-block;
+    padding: 0 5px;
+    vertical-align: top;
+    font-family: 'Fontawesome';
+    font-size: 20px;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    content: '\f0c0';
+}
+
+.menu-social li a[href*="facebook.com"]::before { content: '\f09a'; }
+
+.menu-social li a[href*="twitter.com"]::before { content: '\f099'; }
+
+.menu-social li a[href*="instagram.com"]::before { content: '\f16d'; }
+
+
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
