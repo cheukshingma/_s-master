@@ -716,7 +716,26 @@ a:active {
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
+	display: inline-block;
+	color: #FFF;
+	background-color: #BCC747;
+	width: auto;
+	padding: 10px;
+	margin: 0px auto; 
+	text-align: center;
+}
+.menu-toggle, .main-navigation .toggled #menu-main{
 	display: block;
+}
+
+.main-navigation #menu-main{
+	display: none;
+}
+
+.main-navigation #menu-main, .main-navigation #menu-social{
+	text-align: center;
+	float: none;
+	width: 100%;
 }
 
 @media screen and (min-width: 37.5em) {
@@ -748,6 +767,18 @@ a:active {
 	float: right;
 	text-align: right;
 	width: 50%;
+}
+.main-navigation ul ul 
+{
+	position: absolute;
+	top: auto;
+}
+.main-navigation ul ul li 
+{
+	background:#2E2E2E;
+	border-top: solid 3px;
+	border-right: 0px;
+	border-color: #cdd422;
 }
 
 /*--------------------------------------------------------------
