@@ -1,11 +1,13 @@
 <?php
 /**
- * _s functions and definitions
+ * terra motive functions and definitions.
  *
- * @package _s
+ * @link https://codex.wordpress.org/Functions_File_Explained
+ *
+ * @package terra motive
  */
 
-if ( ! function_exists( '_s_setup' ) ) :
+if ( ! function_exists( 'terra_motive_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -13,14 +15,14 @@ if ( ! function_exists( '_s_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function _s_setup() {
+function terra_motive_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on _s, use a find and replace
-	 * to change '_s' to the name of your theme in all the template files
+	 * If you're building a theme based on terra motive, use a find and replace
+	 * to change 'terra-motive' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( '_s', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'terra-motive', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -36,7 +38,7 @@ function _s_setup() {
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
-	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
 
@@ -44,12 +46,11 @@ function _s_setup() {
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary Menu', 'terra-motive' ),
 		'social'  => esc_html__( 'Social Menu', 'terra-motive'),
-		
 	) );
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
-	 * to output valid HTML5.
+	 * to output valid HTML5 markup.
 	 */
 	add_theme_support( 'html5', array(
 		'search-form',
@@ -61,7 +62,7 @@ function _s_setup() {
 
 	/*
 	 * Enable support for Post Formats.
-	 * See http://codex.wordpress.org/Post_Formats
+	 * See https://developer.wordpress.org/themes/functionality/post-formats/
 	 */
 	add_theme_support( 'post-formats', array(
 		'aside',
@@ -72,13 +73,13 @@ function _s_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( '_s_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'terra_motive_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
 }
-endif; // _s_setup
-add_action( 'after_setup_theme', '_s_setup' );
+endif; // terra_motive_setup
+add_action( 'after_setup_theme', 'terra_motive_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -87,19 +88,19 @@ add_action( 'after_setup_theme', '_s_setup' );
  *
  * @global int $content_width
  */
-function _s_content_width() {
-	$GLOBALS['content_width'] = apply_filters( '_s_content_width', 640 );
+function terra_motive_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'terra_motive_content_width', 600 ); /*pixels*/
 }
-add_action( 'after_setup_theme', '_s_content_width', 0 );
+add_action( 'after_setup_theme', 'terra_motive_content_width', 0 );
 
 /**
  * Register widget area.
  *
- * @link http://codex.wordpress.org/Function_Reference/register_sidebar
+ * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function _s_widgets_init() {
+function terra_motive_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', '_s' ),
+		'name'          => esc_html__( 'Sidebar', 'terra-motive' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -108,27 +109,29 @@ function _s_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 }
-add_action( 'widgets_init', '_s_widgets_init' );
+add_action( 'widgets_init', 'terra_motive_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function _s_scripts() {
-	wp_enqueue_style( '_s-style', get_stylesheet_uri() );
+function terra_motive_scripts() {
+	wp_enqueue_style( 'terra-motive-style', get_stylesheet_uri() );
 	
-	wp_enqueue_style('terra-motive-content-sidebar', get_template_directory_uri() . '/layouts/content-sidebar.css'	); /* Layouts - Content-Sidebars.com */
+	wp_enqueue_style( 'terra-motive-content-sidebar', get_template_directory_uri() . '/layouts/content-sidebar.css' );	
 	
-	wp_enqueue_style('terra-motive-fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'); /* Font Custom Icons */ 
+	wp_enqueue_style( 'terra-motive-google-fonts', 'http://fonts.googleapis.com/css?family=Orbitron:400,500|Play|Roboto:400,100italic' );
 	
-	wp_enqueue_script( '_s-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	wp_enqueue_style( 'terra-motive-fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' );
+	
+	wp_enqueue_script( 'terra-motive-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
-	wp_enqueue_script( '_s-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'terra-motive-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', '_s_scripts' );
+add_action( 'wp_enqueue_scripts', 'terra_motive_scripts' );
 
 /**
  * Implement the Custom Header feature.
@@ -156,9 +159,9 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 /*
-amount of words to excerpt
+* Amount of words to excerpt
 */
 	function custom_excerpt_length( $length ) {
-		return 20;
+		return 50;
 	}
 	add_filter( 'excerpt_length', 'custom_excerpt_length');
