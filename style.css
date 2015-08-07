@@ -45,7 +45,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
-
+/*--------------------------------------------------------------
+# Site Sizing
+--------------------------------------------------------------*/
+.site{
+	width: 100%;
+	min-height: 100%;
+}
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -54,30 +60,9 @@ html {
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
 }
-
 body {
 	margin: 0;
-	font-size: 12px;
-	font-family: 'Lato', sans-serif;
-	text-align: center;
 }
-
-body.page{
-	background: #DFDED4; 
-}
-
-#page{
-	margin: 0 auto;
-	padding: 0;
-	width: 85%;
-	text-align: left;
-	background-color: #FFF;
-}
-
-#content{
-	background-color: #FFF;
-}
-
 
 article,
 aside,
