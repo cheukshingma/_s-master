@@ -15,7 +15,38 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+		<!-- Input FlexSlider --> 
+			<section>
+			  <div class="flexslider"> 
+				<ul class="slides">
+					
+					<!-- Post Per Page = Number of Pictures on Slider -->
+					<!-- Category Name = WordPress Category Name -->
+					<?php
+					query_posts(array('posts_per_page' => 7, 'category_name' => 'Featured'));
+					if(have_posts()) : while(have_posts()) : the_post();
+					?>
+					
+					<!-- Slider Image = WordPress Post "Thmbnail"-->
+					  <li class="featured-post">
+						<?php the_post_thumbnail('slider-image'); ?>
 
+						<!-- Caption = Box within slider showing article -->
+						<div class="caption">
+							<a href="<?php the_permalink(); ?>" class="slider-title"><?php the_title();?></a>
+							<?php the_excerpt(); ?>
+							<a href="<?php the_permalink(); ?>" class="btn">Read More!</a>
+						</div>
+					  </li>
+				  
+					<?php
+						endwhile;
+						endif;
+						wp_reset_query();
+					?>
+				</ul>
+			  </div>
+			</section>
 		<?php if ( have_posts() ) : ?>
 
 			<?php if ( is_home() && ! is_front_page() ) : ?>
