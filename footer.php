@@ -22,6 +22,17 @@
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
+<!-- Flex Slider --> 
+<script type="text/javascript" src="/~ccit2718/wp-content/themes/terra-motive/js/jquery.flexslider.js" ></script>
+<script type="text/javascript">
+	// Can also be used with $(document).ready()
+	jQuery(window).load(function() {
+	  jQuery('.flexslider').flexslider({
+		animation: "slide"
+	  });
+	});
+</script>
+
 <?php wp_footer(); ?>
 
 </body>
