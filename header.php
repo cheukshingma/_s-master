@@ -17,6 +17,9 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
+<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/flexslider.css"/> 
+<script type="text/javascript" src="/~ccit2718/wp-content/themes/terra-motive/js/jquery-1.11.3.min.js"></script>
+
 <?php wp_head(); ?>
 </head>
 
