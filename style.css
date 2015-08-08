@@ -1046,6 +1046,90 @@ object {
 	font-size: 14px; 
 }px; 
 }
+
+/*--------------------------------------------------------------
+## Slider
+--------------------------------------------------------------*/
+.featured-post
+{
+	position: relative;
+	z-index: 1;
+	font-family: 'open sans', sans-serif;
+}
+
+.featured-post .caption 
+{
+	position: absolute;
+	-webkit-border-radius: 15px;
+	        border-radius: 15px;
+	top: 15px;
+	right: 15px;
+	padding:10px;
+	color: #fff;
+	width: 90%;
+	background: #000;
+	opacity: .7;
+	
+	font-size: 17px;
+	z-index: 2;
+}
+
+.featured-post .caption p 
+{
+	padding-bottom: 50px;
+}
+
+.featured-post .slider-title 
+{
+	font-size: 22px;
+	font-weight: 600;
+	text-decoration: none;
+	display: block;
+	margin-bottom: 10px;
+	font-family: 'Orbitron', sans-serif;
+}
+
+.featured-post a:visited 
+{
+	color: #fff;
+}
+
+.featured-post .btn 
+{
+	text-align: center;
+	text-decoration: none;
+	background: #F29729;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	padding: 10px;
+}
+
+/* Responsive Design for Slider */
+@media only screen and (max-width: 767px) {
+	.featured-post .caption 
+	{
+		width: 95%;
+		opacity: .70;
+		
+	}	
+	.featured-post p
+	{
+		font-size: 75%;
+	}
+	.caption .btn 
+	{
+		padding: 5px;
+	}
+}
+
+@media only screen and (max-width: 650px){
+	.featured-post p 
+	{
+		display: none;
+	}
+	
+}
 /*--------------------------------------------------------------
 ## Responsive Design 
 --------------------------------------------------------------*/
