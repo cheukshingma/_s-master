@@ -94,14 +94,32 @@ function terra_motive_content_width() {
 add_action( 'after_setup_theme', 'terra_motive_content_width', 0 );
 
 /**
- * Register widget area.
+ * Register sidebar/widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function terra_motive_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'terra-motive' ),
+		'name'          => esc_html__( 'Primary Sidebar', 'terra-motive' ),
 		'id'            => 'sidebar-1',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Content- Sidebar', 'terra-motive' ),
+		'id'            => 'sidebar-2',
+		'description'   => '',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer Widget Area', 'terra-motive' ),
+		'id'            => 'sidebar-3',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
