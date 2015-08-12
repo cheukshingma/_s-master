@@ -251,3 +251,7 @@ if ( $the_query->have_posts() ) {
 
 
 return $string;
+
+/* Restore original Post Data */
+wp_reset_postdata();
+}
