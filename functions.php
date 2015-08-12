@@ -236,7 +236,7 @@ add_filter( 'widget_text', 'do_shortcode');
  */
 function my_postsbycategory() {
 // The Custom News Widget Query
-$the_query = new WP_Query( array( 'category_name' => 'news', 'posts_per_page' => 3 ) );
+$the_query = new WP_Query( array( 'types' => 'custom', 'posts_per_page' => 3 ) );
 	//Category Name = WP Category Slug
 	//Post Per Page = Number of Post on Widget 
 
