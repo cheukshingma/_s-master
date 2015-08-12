@@ -224,6 +224,14 @@ add_image_size ('slides', 760, 300, true); // Slider Thumbnail
 require get_stylesheet_directory().'/inc/options.php';
 
 /*
+ * Adding Audio Files/PLaylist into Sidebar/Widget 
+ */
+add_filter( 'widget_text', array( $wp_embed, 'run_shortcode' ), 8 );
+add_filter( 'widget_text', array( $wp_embed, 'autoembed'), 8 );
+add_filter( 'widget_text', 'do_shortcode');
+
+
+/*
  * My Custom News Widget 
  */
 function my_postsbycategory() {
