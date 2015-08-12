@@ -222,3 +222,32 @@ add_image_size ('slides', 760, 300, true); // Slider Thumbnail
 // Call the file that controls the theme options 
 //(Class 8 - Building an Option Page - Link inc/option.php)
 require get_stylesheet_directory().'/inc/options.php';
+
+/*
+ * My Custom News Widget 
+ */
+function my_postsbycategory() {
+// The Custom News Widget Query
+$the_query = new WP_Query( array( 'category_name' => 'news', 'posts_per_page' => 3 ) );
+	//Category Name = WP Category Slug
+	//Post Per Page = Number of Post on Widget 
+
+// The Cust News Widget Loop
+if ( $the_query->have_posts() ) {
+	$string .= '<ul class="postsbycategory widget_recent_entries">';
+	while ( $the_query->have_posts() ) {
+		$the_query->the_post();
+			if ( has_post_thumbnail() ) {
+			$string .= '<li>';
+			$string .= '<a href="' . get_the_permalink() .'" rel="bookmark">' . get_the_post_thumbnail($post_id, array( 75, 75) ) . get_the_title() .'</a></li>';
+			} else { 
+			// If the image featured is not found
+			$string .= '<li><a href="' . get_the_permalink() .'" rel="bookmark">' . get_the_title() .'</a></li>';
+			}
+			}
+	} else {
+	// If no posts are found
+}
+
+
+return $string;
