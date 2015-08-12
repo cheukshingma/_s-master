@@ -255,3 +255,9 @@ return $string;
 /* Restore original Post Data */
 wp_reset_postdata();
 }
+
+// Add a Shortcode - (WP > Appearance > Widget > Text > Add Shortcode)
+add_shortcode('categoryposts', 'my_postsbycategory');
+
+// Enable Shortcodes in Text Widgets
+add_filter('widget_text', 'do_shortcode');
